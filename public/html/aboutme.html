@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="../css/custom_style.css"><!--Hoja de estilo comun-->
+    <link rel="stylesheet" href="../css/style.css"><!--TailwindCSS-->
+    <link rel="shortcut icon" href="../css/img/index/koffein.ico">
+    <script src="https://kit.fontawesome.com/d358b6a318.js" crossorigin="anonymous"></script>
+    <script src="../js/darkmode.js" defer></script>
+</head>
+<body class="normal font-Mont">
+    <!--Menu comienza-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full normalNav" id="menu">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <img class="w-11 mr-2" id="imgLogo" src="../css/img/nav/icon_keyboard.png" alt="Icono_teclado">
+                <a href="index.html" id="logo" class="text-lg mr-9 font-semibold tracking-widest normalLogo uppercase rounded-lg focus:outline-none focus:shadow-outline">Koffein Store</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <img class="w-5" src="../css/img/nav/burger.png" alt="boton_burger">
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Inicio</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="toregister.html">Registrar</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="galery.html">Galeria</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="aboutme.html">Sobre mi</a>
+                <div>
+                    <button class="switch ml-4" id="switch">
+                        <span class="order"><i class="fas fa-sun"></i></span>
+                        <span class="order"><i class="fas fa-moon"></i></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--Menu termina-->
+    <!--Main comienza-->
+    <main>
+        <!--1.-Sobre mí comienza-->
+        <section>
+            <div id="T1" class="py-3 text-center mt-8 uppercase text-lg font-bold border-t-4 border-b-4 normalBorder divide-opacity-70">
+                <h2>Sobre mí</h2>
+            </div>
+            <div id="C1" class="md:flex py-10 justify-center border-b-4 normalBorder divide-opacity-70">
+                <div class="mx-12 mb-9 ml-14 md:mb-0 md:ml-0">
+                    <img id="I1" class="sm:justify-center w-72 align-left normalBorder border-4 rounded-lg" src="../css/img/aboutme/yo.png" alt="Avatar_Thomas">
+                </div>
+                <div class="mx-12 ml-16 md:ml-0">
+                    <p class="text-left justify-start"></p>Mi nombre es Thomas Laurence Machuca, estudiante <br>de ingeniería informática, fundador de este 
+                    proyecto <br> y como tal estoy totalmente comprometido a darle vida <br>poco a poco, ya que tengo la
+                    motivación y el conocimiento  <br>necesario para lograrlo.</p>
+                </div>
+                
+            </div>
+            
+        </section>
+        <!--Sobre mí termina-->
+        <!--Café comienza-->
+        <div class="flex justify-center mt-5">
+            <img src="../css/img/index/koffein.gif" alt="cafe_animado">
+        </div>
+        <!--Café termina-->
+        <!--2.-Objetivo comienza-->
+        <section>
+            <div id="T2" class="py-3 text-center mt-8 uppercase text-lg font-bold border-t-4 border-b-4 normalBorder divide-opacity-70">
+                <h2>Objetivo</h2>
+            </div>
+            <div id="C2" class="md:flex py-10 justify-center border-b-4 normalBorder divide-opacity-70"> 
+                <div class="mx-12 ml-16 md:ml-0">
+                    <p class="text-right justify-start"></p>Mi objetivo como autor de esta marca y <br>página web es entregarles a ustedes las <br>últimas tecnologías 
+                            en periféricos con productos calidad/precio <br>que realmente valgan la pena. Ya que como alto <br>consumidor de estas tecnologías 
+                            <br>tengo el conocimiento suficiente en esta área <br>y es por esto que llegaremos a nuestro público con<br> productos de excelente calidad 
+                            a un precio justo y sincero.</p>
+                </div>
+                <div class="mx-12 ml-12 mt-9 md:mt-0 md:ml-0">
+                    <img id="I2" class="w-72 normalBorder border-4 rounded-lg" src="../css/img/aboutme/keyboard.png" alt="Teclado">
+                </div>
+            </div>
+        </section>
+        <!--Objetivo termina-->
+        <!--Café comienza-->
+        <div class="flex justify-center mt-5">
+            <img src="../css/img/index/koffein.gif" alt="cafe_animado">
+        </div>
+        <!--Café termina-->
+        <!--3.-Meta comienza-->
+        <section>
+            <div id="T3" class="py-3 text-center mt-8 uppercase text-lg font-bold border-t-4 border-b-4 normalBorder divide-opacity-70">
+                <h2>Misión y Metas</h2>
+            </div>
+            <div id="C3" class="md:flex py-10 justify-center border-b-4 normalBorder divide-opacity-70">
+                <div class="mx-12 mb-9 ml-12 md:mb-0 md:ml-0">
+                    <img id="I3" class="w-72 align-left mr-8 normalBorder border-4 rounded-lg" src="../css/img/aboutme/setup.jpg" alt="Setup">
+                </div>
+                <div class="mx-12 ml-16 md:ml-0">
+                    <p class="text-left justify-start"></p>Koffein Store tiene como misión principal <br>el poder llegar a todos nuestro clientes<br> 
+                    cumpliendo cada una de sus espectativas <br>relacionadas con la tecnología, y en un futuro, 
+                    ser por <br>excelencia el mayor distribuidor de periféricos.</p>
+                    <p class="text-left justify-start">Además Koffein Store está en constante contribución <br>
+                    con empresas relacionados al mundo Gamer. <br>Por otro lado pero no menos importante una parte <br>
+                    de los ingresos que se generen serán entregados a <br> asociaciones que trabajan día a día protegiendo nuestro 
+                    <br>medio ambiente.</p>
+                </div>
+            </div>
+        </section>
+        <!--Meta termina-->
+        <!--Café comienza-->
+        <div class="flex justify-center mt-5">
+            <img src="../css/img/index/koffein.gif" alt="cafe_animado">
+        </div>
+        <!--Café termina-->
+        <!--Video comienza-->
+        <section>
+            <div id="T4" class="py-3 text-center mt-8 uppercase text-lg font-bold border-t-4 border-b-4 normalBorder divide-opacity-70">
+                <h2>Video Setups Minimalistas</h2>
+            </div>
+            <div id="C4" class="video-responsivo mt-2 normalBorder divide-opacity-70">
+                <iframe class="py-10" src="https://www.youtube.com/embed/0PHDVmgs7p0?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="C5" class="text-center normalBorder border-b-4 pb-4">
+                <p class="text-xl">o haz clic <a class="text-blue-600 animate-pulse underline" href="https://www.youtube.com/watch?v=0PHDVmgs7p0" target="_blank">aquí</a> para dirigirte al video</p>
+            </div>
+        </section>
+        <!--Video termina-->
+        <!--Café comienza-->
+        <div class="flex justify-center mt-5">
+            <img src="../css/img/index/koffein.gif" alt="cafe_animado">
+        </div>
+        <!--Café termina-->
+    </main>
+    <!--Main termina-->
+    <!--Footer comienza-->
+    <footer class="normalFooter" id="footer">
+        <div class="flex justify-center items-center mt-16 mb-0">
+            <div class="m-5 px-6">
+                <a href="https://www.facebook.com" target="_blank"><img class="md:w-28" src="../css/img/footer/facebook.png" alt="Facebook"></a>
+            </div>
+            <div class="m-5 px-6">
+               <a href="https://www.instagram.com/laurence_xdxd/" target="_blank"><img class="md:w-24" src="../css/img/footer/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="m-5 px-6">
+                <a href="https://twitter.com/th_Laurence" target="_blank" rel="noopener noreferrer"><img class="md:w-24" src="../css/img/footer/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="text-xs text-center md:text-base mt-0 pb-2">
+            <p>
+                Thomas Laurence Machuca
+            </p>
+            <p>
+                @Copyright Derechos reservados.
+            </p>
+        </div>
+    </footer>
+    <!--Footer termina-->
+    
+</body>
+</html>

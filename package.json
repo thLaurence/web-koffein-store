@@ -1,0 +1,25 @@
+{
+  "name": "p1",
+  "version": "1.0.0",
+  "description": "Este proyecto funciona con TailwindCSS y PostCSS\r por lo tanto es necesario iniciar NodeJS en el proyecto.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss build public/css/tailwind.css -o public/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thLaurence/Experiencia1_Laurence_003D.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thLaurence/Experiencia1_Laurence_003D/issues"
+  },
+  "homepage": "https://github.com/thLaurence/Experiencia1_Laurence_003D#readme"
+}

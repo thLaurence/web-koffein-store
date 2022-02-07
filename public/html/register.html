@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrando</title>
+    <link rel="stylesheet" href="../css/custom_style.css"><!--Hoja de estilo comun-->
+    <link rel="stylesheet" href="../css/style.css"><!--TailwindCSS-->
+    <link rel="shortcut icon" href="../css/img/index/koffein.ico">
+</head>
+<body class="bg-gray-100 m-auto font-Mont">
+    <!--Menu comienza-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full text-gray-700 bg-gray-200 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <img class="w-11 mr-2" src="../css/img/nav/icon_keyboard.png" alt="Icono_teclado">
+                <a href="index.html" class="text-lg mr-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Koffein Store</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <img class="w-5" src="../css/img/nav/burger.png" alt="boton_burger">
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Inicio</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="toregister.html">Registrar</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="galery.html">Galeria</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="aboutme.html">Sobre mi</a>
+            </nav>
+        </div>
+    </div>
+    <!--Menu termina-->
+    <!--Registrarse-->
+    <section>
+        <h1 class="mt-8 text-center uppercase font-bold">Registrate...</h1>
+        <div class="mt-8">
+            <form action="" id="registro" onsubmit="">
+                <div class="md:flex">
+                    <div class="md:w-1/2 px-3 mb-4 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">Ingrese nombre: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="text" name="nombre" id="nombre" placeholder=" Escriba su nombre">
+                        <span id="wNombre" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-4 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">Ingrese apellidos: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="text" name="apellidos" id="apellidos" placeholder=" Escriba sus apellidos">
+                        <span id="wApellido" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                    </div>
+                </div>
+                <div class="md:flex">
+                    <div class="md:w-1/2 px-3 mb-6 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">E-mail: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="email" name="email" id="email" placeholder=" Escriba su email">
+                        <span id="wEmail" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-6 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">Telefono/Celular: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="number" name="fono" id="fono" placeholder=" Ingrese código de país + número">
+                        <span id="wFono" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                    </div>
+                </div>
+                <div class="md:flex">
+                    <div class="md:w-1/2 px-3 mb-6 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">Ingrese contraseña: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-0" type="password" name="password" id="password" placeholder=" Escriba su contraseña">
+                        <span id="wPass" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                        <span class="ml-2 text-gray-400 text-xs italic">
+                            Minimo 8 caracteres,
+                            maximo 15,
+                            al menos una letra mayúscula,
+                            al menos una letra minucula,
+                            al menos un dígito,
+                            no espacios en blanco y
+                            al menos 1 caracter especial.                   
+                        </span>
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-6 md:mb:0">
+                        <lab class="uppercase tracking-wide text-xs font-bold mb-2">Confirme contraseña: </lab>
+                        <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="password" name="passwordConf" id="passwordConf" placeholder=" Confirme su contraseña">
+                        <span id="wPassConf" class="ml-2 italic font-normal text-xs text-red-500"></span>
+                    </div>
+                </div>
+                <div class="md:text-center">
+                    <input class="md:ml-0 ml-2 md:w-72 bg-black text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full" type="submit" value="Enviar" id="submit">          
+                </div>
+                <div class="text-center mt-6">
+                    <span id="wEnvio" class="italic font-bold text-sm text-black"></span>
+                </div>
+            </form>
+        </div>
+        <script src="../js/validationRegister.js"></script>
+    </section>
+    <!--Registrarse termina-->
+    <!--Footer comienza-->
+    <footer class="shadow-sm bg-gray-200">
+        <div class="flex justify-center items-center mt-16 mb-0">
+            <div class="m-5 px-6">
+                <a href="https://www.facebook.com" target="_blank"><img class="md:w-28" src="../css/img/footer/facebook.png" alt="Facebook"></a>
+            </div>
+            <div class="m-5 px-6">
+                <a href="https://www.instagram.com/laurence_xdxd/" target="_blank"><img class="md:w-24" src="../css/img/footer/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="m-5 px-6">
+                <a href="https://twitter.com/th_Laurence" target="_blank" rel="noopener noreferrer"><img class="md:w-24" src="../css/img/footer/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="text-xs text-center md:text-base mt-0 pb-2">
+            <p>
+                Thomas Laurence Machuca
+            </p>
+            <p>
+                @Copyright Derechos reservados.
+            </p>
+        </div>
+    </footer>
+    <!--Footer termina-->    
+</body>
+</html>
