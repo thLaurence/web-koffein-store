@@ -8,7 +8,7 @@ Página web la cual contiene:
  - Pequeño uso de JS
 
 
-![KoffeinStore](./public/design/KoffeinStore.png)
+![KoffeinStore](./public/design/KoffeinStore-All.png)
 
 ## Requisitos
 Inicie NPM
